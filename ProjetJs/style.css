@@ -173,6 +173,19 @@ body .container section {
   line-height: 22px;
   display: flex;
   flex-direction: column;
+  transition: color 0.5s, scale 0.5s, background-color 0.5s;
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+}
+body .container section:hover {
+  background-color: rgba(0, 0, 0, 0.021);
+  transition: color 0.5s, scale 0.4s, background-color 1s;
+  scale: 1.05;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+body .container section:hover .bin {
+  display: block;
 }
 body .container section img {
   width: 350px;
@@ -220,6 +233,7 @@ body .container section span.cast {
   top: 445px;
 }
 .div_bin .bin {
+  display: none;
   height: 20px;
   width: 20px;
 }
@@ -265,15 +279,5 @@ body .container section span.cast {
     width: 350px;
     flex-direction: column;
     padding: 0 10px 50px 10px;
-    transition: color 0.5s, scale 0.5s, background-color 0.5s;
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
-  body .container section:hover {
-    background-color: rgba(0, 0, 0, 0.021);
-    transition: color 0.5s, scale 0.4s, background-color 1s;
-    scale: 1.05;
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
   }
 }/*# sourceMappingURL=style.css.map */

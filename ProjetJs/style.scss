@@ -170,6 +170,17 @@ body {
       line-height: 22px;
       display: flex;
       flex-direction: column;
+      transition: color 0.5s, scale 0.5s, background-color 0.5s;
+      backdrop-filter: blur(0);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.021);
+        transition: color 0.5s, scale 0.4s, background-color 1s;
+        scale: 1.05;
+        backdrop-filter: blur(10px);
+        .bin {
+          display: block;
+        }
+      }
 
       img {
         width: $width_mobile;
@@ -216,6 +227,7 @@ body {
   left: 325px;
   top: 445px;
   .bin {
+    display: none;
     height: 20px;
     width: 20px;
   }
@@ -260,14 +272,6 @@ body {
         width: $width_mobile;
         flex-direction: column;
         padding: 0 10px 50px 10px;
-        transition: color 0.5s, scale 0.5s, background-color 0.5s;
-        backdrop-filter: blur(0);
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.021);
-          transition: color 0.5s, scale 0.4s, background-color 1s;
-          scale: 1.05;
-          backdrop-filter: blur(10px);
-        }
       }
     }
   }
